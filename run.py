@@ -33,8 +33,8 @@ def authenticate_user(user_name,password):
     '''
     Function that verifies the existence of the user before creating credentials
     '''
-    checking_user = Credentials.check_user(user_name,password)
-    return checking_user
+    user_existance = Credentials.check_user(user_name,password)
+    return  user_existance 
 
 def rand_pass(size):
     '''
@@ -149,10 +149,10 @@ def main():
                 print('\n')
                 while True:
                     print('\n')
-                    print("short codes: \n cc to create new credentials: \n dc to display credentials: \n sc to search credentials: \n rm to remove or delete credentials: \n copy to copy credentials: \n ex to exit")
+                    print("short codes: \n cnc to create new credentials: \n dc to display credentials: \n sc to search credentials: \n rm to remove or delete credentials: \n copy to copy credentials: \n ex to exit")
                     print('\n')
                     short_code = input().lower()
-                    if short_code == 'cc':
+                    if short_code == 'cnc':
                         print('\n')
                         print("Enter your credential details")
                         print("Enter name of platform account eg \'instagram\'")
