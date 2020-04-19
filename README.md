@@ -24,14 +24,13 @@ This is an application that help people on managing their different accounts pas
 
 ## Setup Instructions
 
-* Clone or Download from github, https://github.com
+* Clone or Download from github, https://github.com/jadielmwangi/
 * cd into the project folder.
 * run chmod+x on your project directory.
 * ./run.py to execute the program.
 
 ## Technologies Used
 * Python
-* Pip
 * Pyperclip
 
 ## Contact and Support details
