@@ -37,7 +37,8 @@ class TestUser(unittest.TestCase):
 
     def tearDown(self):
         '''
-        tearDown method that does clean up after each test case has run
+        tearDown method  that does clean up after each test case has run
+        
         '''
 
         User.user_list = []
@@ -51,7 +52,7 @@ class TestUser(unittest.TestCase):
         test_user = User("Jadiel","Muriithi","0727867684","jedielmwangi@gmail.com","sirmwas","101010") #new user
         test_user.save_user()
 
-        self.new_user.delete_user() #Deleting a user
+        self.new_user.delete_user()  #Deleting a user
         self.assertEqual(len(User.user_list),1)
 
 
