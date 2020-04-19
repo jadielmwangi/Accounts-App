@@ -83,9 +83,9 @@ class Credentials:
         '''
         Takes in random password from digits and letters
         '''
-        generate_pass = ''.join([random.choice(string.ascii_letters + string.digits) for n in range(size)])
+        random_password = ''.join([random.choice(string.ascii_letters + string.digits) for n in range(size)])
 
-        return generate_pass
+        return random_password
 
 
     @classmethod
