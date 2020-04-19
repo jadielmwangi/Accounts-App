@@ -14,6 +14,7 @@ class TestUser(unittest.TestCase):
         Set up method to run before each test cases.
         '''
         self.new_user = User("Jadiel","Muriithi","0727867684","jedielmwangi@gmail.com","sirmwas","101010")
+        
         # create user object
 
     def test_init(self):
@@ -66,7 +67,7 @@ class TestCredential(unittest.TestCase):
         '''
         setup method to run before each test cases
         '''
-        self.new_credential = Credentials("sirmwas","twitter","101010")  #Create Credential object
+        self.new_credential = Credentials("sirmwas","twitter","101010")  #Creating Credential object
 
     def test_init(self):
         '''
