@@ -67,13 +67,13 @@ class Credentials:
 
     def save_credentials(self):
         '''
-        function to save user credentials
+        function for saving user credentials
         '''
         Credentials.credential_list.append(self)
 
     def delete_credentials(self):
         '''
-        function to check whether we can delete the credentials
+        function for checking whether we can delete the credentials
         '''
         Credentials.credential_list.remove(self)
 
@@ -81,7 +81,7 @@ class Credentials:
     @classmethod
     def rand_pass(cls,size):
         '''
-        Takes in random choices from digits and ascii_letters
+        Takes in random password from digits and letters
         '''
         generate_pass = ''.join([random.choice(string.ascii_letters + string.digits) for n in range(size)])
 
@@ -114,7 +114,7 @@ class Credentials:
     @classmethod
     def copy_credentials(cls,platform_name):
         '''
-        method that copies the credentials after the account name has been entered.
+        method that copies the credentials .
         '''
         found_credential = cls.find_by_platform_name(platform_name)
         return pyperclip.copy(found_credential.password)
