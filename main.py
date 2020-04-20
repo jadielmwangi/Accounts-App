@@ -100,21 +100,32 @@ class Credentials:
                 return credential
 
 
-    @classmethod
-    def display_credentials(cls,user_name):
-        '''
-        Class method to display the list of credentials saved
-        '''
-        user_credentials_list = []
-        for credential in cls.credential_list:
-            if credential.user_name == user_name:
-                user_credentials_list.append(credential)
-        return user_credentials_list
+    # @classmethod
+    # def find_by_platform_name (cls,platform_name):   
 
-    @classmethod
-    def copy_credentials(cls,platform_name):
-        '''
-        method that copies the credentials .
-        '''
-        found_credential = cls.find_by_platform_name(platform_name)
-        return pyperclip.copy(found_credential.password)
+    #     for credential in cls.credentials_list:
+    #         if credential.platform_name == platform_name:
+    #             return credential
+
+
+
+
+    # @classmethod
+    # def display_credentials(cls,user_name):
+    #     '''
+    #     Class method to display the list of credentials saved
+    #     '''
+    #     user_credentials_list = []
+    #     for credential in cls.credential_list:
+    #         if credential.user_name == user_name:
+    #             user_credentials_list.append(credential)
+    #     return user_credentials_list
+
+    # @classmethod
+    # def copy_credentials(cls,platform_name):
+    #     '''
+    #     method that copies the credentials .
+    #     '''
+    #     found_credential = cls.find_by_platform_name(platform_name)
+    #     return pyperclip.copy(found_credential.password)
+
