@@ -15,6 +15,10 @@ class TestUser(unittest.TestCase):
         '''
         self.new_user = User("Jadiel","Muriithi","0727867684","jedielmwangi@gmail.com","sirmwas","101010")
         
+
+
+
+        
         # create user object
 
     def test_init(self):
