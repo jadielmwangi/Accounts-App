@@ -117,29 +117,29 @@ class TestCredential(unittest.TestCase):
         credential_found = Credentials.find_by_platform_name('twitter')
         self.assertEqual(credential_found.platform_name,'twitter')
 
-    def test_display_all_credentials(self):
-        '''
-        Method where the user can view various account credentials
-        '''
-        self.assertEqual(Credentials.display_all_credentials(),Credentials.credential_list)
+    # def test_display_all_credentials(self):
+    #     '''
+    #     Method where the user can view various account credentials
+    #     '''
+    #     self.assertEqual(Credentials.display_all_credentials(),Credentials.credential_list)
 
-    def test_copy_credentials(self):
-        '''
-        A test method to see if the user can copy credentials to the clipboard
-        '''
+    # def test_copy_credentials(self):
+    #     '''
+    #     A test method to see if the user can copy credentials to the clipboard
+    #     '''
 
-        self.new_credential.save_credentials()
-        twitter = Credentials('sirmwas','twitter','101010')
-        twitter.save_credentials()
-        found_credential = None
-        for credential in Credentials.credential_list:
-            found_credential = Credentials.find_by_platform_name(
-                credential.platform_name
-            )
-            return pyperclip.copy(found_credential.password)
-        Credentials.copy_credentials(self.new_credential.platform_name)
-        self.assertEqual('101010',pyperclip.paste())
-        print(pyperclip.paste())
+    #     self.new_credential.save_credentials()
+    #     twitter = Credentials('sirmwas','twitter','101010')
+    #     twitter.save_credentials()
+    #     found_credential = None
+    #     for credential in Credentials.credential_list:
+    #         found_credential = Credentials.find_by_platform_name(
+    #             credential.platform_name
+    #         )
+    #         return pyperclip.copy(found_credential.password)
+    #     Credentials.copy_credentials(self.new_credential.platform_name)
+    #     self.assertEqual('101010',pyperclip.paste())
+    #     print(pyperclip.paste())
 
 
 
