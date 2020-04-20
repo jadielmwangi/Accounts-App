@@ -12,7 +12,7 @@ def create_user(first_name,second_name,phone_number,email,user_name,password):
 
 def create_credential(user_name,platform_name,password):
     '''
-    function to create a new user account
+    function to create a new platform account
     '''
     new_credential = Credentials(user_name,platform_name,password)
     return new_credential
@@ -70,20 +70,26 @@ def find_by_platform_name(platform_name):
 
 
 def main():
-    user_name = input("Enter Your Name?")
-    print(f"Hello {user_name},welcome to Password Locker:")
+    print("Hello, Welcome to your password account locker. What is your name?")
+    user_name = input()
+
+    print(f"Hello {user_name}. what would you like to do?")
     print('\n')
+
+    # user_name = input("Enter Your Name?")
+    # print(f"Hello {user_name},welcome to Password Locker:")
+    # print('\n')
     while True:
         print ('\n')
         print (r"*"*30)
         print ('\n')
         print("="*60)
-        print("Use these short codes to make selection in Password_Locker:\n lgn to log in \n ca to create a new account. \n ex to exit")
+        print("Use these short codes to make selection in Password_Locker:\n lgn to log in \n cna : to create a new account. \n ex to exit")
         print("="*60) 
         print('\n')
 
         short_code = input().lower()
-        if short_code == 'ca':
+        if short_code == 'cna':
             print("Enter First Name ")
             first_name = input()
 
@@ -101,7 +107,7 @@ def main():
 
             
 
-            print("Input your own password or have one generated for you by this app? Use the following short codes\n'gyp\' to generate password.\n \'eyp\' to enter your own password \n \'ex\' to exit... ")
+            print("Input your own password or generate it using this app? Use the following short codes\n'gyp\' :to generate password.\n \'eyp\' :to enter your own password \n \'ex\' :to exit... ")
             password_choosen = input()
             password = ''
 
@@ -149,7 +155,7 @@ def main():
                 print('\n')
                 while True:
                     print('\n')
-                    print("short codes: \n cnc to create new credentials: \n dc to display credentials: \n sc to search credentials: \n rm to remove or delete credentials: \n copy to copy credentials: \n ex to exit")
+                    print("using the following short codes: \n cnc to create new credentials: \n dc to display credentials: \n sc to search credentials: \n rm to remove or delete credentials: \n copy to copy credentials: \n ex to exit")
                     print('\n')
                     short_code = input().lower()
                     if short_code == 'cnc':
@@ -166,12 +172,12 @@ def main():
                             password_choosen = input()
                             if password_choosen == 'eyp':
                                 password = input(
-                                    "Enter a password of your choice")
+                                    "Enter a password that  you prefer")
                                 break
 
                             elif password_choosen == 'gyp':
                                 print(
-                                    "Enter the length of the password you wish to generate eg 6 ")
+                                    "Indicate length of the password to be generate eg 6 ")
                                 pass_len = int(input())
                                 password = rand_pass(pass_len)
                                 break
@@ -193,10 +199,10 @@ def main():
 
                     elif short_code == 'dc':
                         if display_credentials(user_name):
-                            print("Here is a list of your credentials:")
+                            print("Your list of credentials is as follows:")
                             print('\n')
                             for credential in display_credentials(user_name):
-                                print(f"Credential Created:\n Account type: {platform_name} \n Account Username: {user_name} \n Account Password: {password}")
+                                print(f"Credential Created:\n Account platform name: {platform_name} \n Account Username: {user_name} \n Account Password: {password}")
 
                         else:
                             print("You don\'t have any credentials yet")
