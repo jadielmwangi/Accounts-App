@@ -76,9 +76,6 @@ def main():
     print(f"Hello {user_name}. what would you like to do?")
     print('\n')
 
-    # user_name = input("Enter Your Name?")
-    # print(f"Hello {user_name},welcome to Password Locker:")
-    # print('\n')
     while True:
         print ('\n')
         print (r"*"*30)
@@ -132,7 +129,7 @@ def main():
                 
                 
             # Create and save new user
-            save_user(create_user(first_name, second_name, phone_number,email,user_name, password))
+            save_user(create_user(first_name, second_name, phone_number,email,user_name,  password))
             print('\n')
             print(f"New Account for {first_name} {second_name} created.")
             print('\n')
@@ -161,7 +158,7 @@ def main():
                     if short_code == 'cnc':
                         print('\n')
                         print("Enter your credential details")
-                        print("Enter name of platform account eg \'instagram\'")
+                        print("Enter name of platform account eg \'twitter\'")
                         platform_name = input()
                         print(f"Enter username ")
                         user_name = input()
